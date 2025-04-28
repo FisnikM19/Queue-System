@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Queue Management System</title>
+    <link rel="stylesheet" href="home.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+<body>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">Queue System</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Log In</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section (Demo Content) -->
+<section class="hero-section">
+    <div class="container hero-content">
+        <h1>Smart Queue Management</h1>
+        <p>Join queues remotely, track progress in real-time, and receive notifications when it's your turn.</p>
+        <div>
+            <a href="#" class="btn btn-primary btn-lg me-2">Get Started</a>
+            <a href="#" class="btn btn-outline-secondary btn-lg">Learn More</a>
+        </div>
+    </div>
+</section>
+
+<!-- Facilities Section -->
+<section class="facility-cards py-5">
+    <div class="container">
+        <h2 class="text-center mb-4">Our Partner Facilities</h2>
+        <p class="text-center mb-5">Our queue management system is trusted by various institutions across different sectors</p>
+
+        <div class="row g-4">
+            <!-- Card 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 facility-card">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">University of Technology</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="facility-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-building" viewBox="0 0 16 16">
+                                <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v10a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm.5.5h7v10h-7z"/>
+                                <path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zm13 10V4a1 1 0 0 0-1-1H2a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1"/>
+                            </svg>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><strong>Country:</strong> United States</li>
+                            <li><strong>City:</strong> Boston</li>
+                            <li><strong>Address:</strong> 123 Education Drive</li>
+                            <li><strong>Services:</strong> Enrollment, Academic Advising, Financial Aid</li>
+                        </ul>
+                        <p class="card-text">Streamlining student services with digital queue management across multiple departments.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-primary btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 facility-card">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="card-title mb-0">Central City Hospital</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="facility-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-hospital" viewBox="0 0 16 16">
+                                <path d="M8.5 5.034v1.1l.953-.55.5.867L9 7l.953.55-.5.866-.953-.55v1.1h-1v-1.1l-.953.55-.5-.866L7 7l-.953-.55.5-.866.953.55v-1.1zM2 2a1 1 0 0 1 1-1h10a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1zm2 .5a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h10a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5zm0 9V7h10v4.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5"/>
+                            </svg>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><strong>Country:</strong> Canada</li>
+                            <li><strong>City:</strong> Toronto</li>
+                            <li><strong>Address:</strong> 456 Healthcare Avenue</li>
+                            <li><strong>Services:</strong> Outpatient Care, Lab Tests, Pharmacy</li>
+                        </ul>
+                        <p class="card-text">Reducing wait times and improving patient experience with real-time queue updates.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-success btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 facility-card">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="card-title mb-0">Municipal Services Office</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="facility-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-buildings" viewBox="0 0 16 16">
+                                <path d="M14.763.075A.5.5 0 0 1 15 .5v15a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V14h-1v1.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10a.5.5 0 0 1 .342-.474L6 7.64V4.5a.5.5 0 0 1 .276-.447l8-4a.5.5 0 0 1 .487.022M6 8.694 1 10.36V15h5zM7 15h2v-1.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V15h2V1.309l-7 3.5z"/>
+                                <path d="M2 11h1v1H2zm2 0h1v1H4zm-2 2h1v1H2zm2 0h1v1H4zm4-4h1v1H8zm2 0h1v1h-1zm-2 2h1v1H8zm2 0h1v1h-1zm2-2h1v1h-1zm0 2h1v1h-1zM8 7h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 5h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1zM8 3h1v1H8zm2 0h1v1h-1zm2 0h1v1h-1z"/>
+                            </svg>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><strong>Country:</strong> United Kingdom</li>
+                            <li><strong>City:</strong> London</li>
+                            <li><strong>Address:</strong> 789 Government Plaza</li>
+                            <li><strong>Services:</strong> License Renewal, Document Processing, Tax Assistance</li>
+                        </ul>
+                        <p class="card-text">Enhancing citizen services with efficient queue management and appointment scheduling.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-info btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 facility-card">
+                    <div class="card-header bg-warning text-dark">
+                        <h5 class="card-title mb-0">First National Bank</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="facility-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-bank" viewBox="0 0 16 16">
+                                <path d="m8 0 6.61 3h.89a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5H15v7a.5.5 0 0 1 .485.38l.5 2a.498.498 0 0 1-.485.62H.5a.498.498 0 0 1-.485-.62l.5-2A.501.501 0 0 1 1 13V6H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 3h.89zM3.777 3h8.447L8 1zM2 6v7h1V6zm2 0v7h2.5V6zm3.5 0v7h1V6zm2 0v7H12V6zM13 6v7h1V6zm2-1V4H1v1zm-.39 9H1.39l-.25 1h13.72z"/>
+                            </svg>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><strong>Country:</strong> Australia</li>
+                            <li><strong>City:</strong> Sydney</li>
+                            <li><strong>Address:</strong> 321 Financial Street</li>
+                            <li><strong>Services:</strong> Personal Banking, Business Services, Loan Applications</li>
+                        </ul>
+                        <p class="card-text">Optimizing customer flow and reducing perceived wait times with virtual queue management.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-warning btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 facility-card">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="card-title mb-0">Metro Shopping Center</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="facility-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-shop" viewBox="0 0 16 16">
+                                <path d="M2.97 1.35A1 1 0 0 1 3.73 1h8.54a1 1 0 0 1 .76.35l2.609 3.044A1.5 1.5 0 0 1 16 5.37v.255a2.375 2.375 0 0 1-4.25 1.458A2.371 2.371 0 0 1 9.875 8 2.37 2.37 0 0 1 8 7.083 2.37 2.37 0 0 1 6.125 8a2.37 2.37 0 0 1-1.875-.917A2.375 2.375 0 0 1 0 5.625V5.37a1.5 1.5 0 0 1 .361-.976l2.61-3.045zm1.78 4.275a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0 1.375 1.375 0 1 0 2.75 0V5.37a.5.5 0 0 0-.12-.325L12.27 2H3.73L1.12 5.045A.5.5 0 0 0 1 5.37v.255a1.375 1.375 0 0 0 2.75 0 .5.5 0 0 1 1 0M1.5 8.5A.5.5 0 0 1 2 9v6h1v-5a1 1 0 0 1 1-1h3a1 1 0 0 1 1 1v5h6V9a.5.5 0 0 1 1 0v6h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1V9a.5.5 0 0 1 .5-.5M4 15h3v-5H4zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1zm3 0h-2v3h2z"/>
+                            </svg>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><strong>Country:</strong> Germany</li>
+                            <li><strong>City:</strong> Berlin</li>
+                            <li><strong>Address:</strong> 567 Retail Boulevard</li>
+                            <li><strong>Services:</strong> Customer Service, Returns Processing, Special Orders</li>
+                        </ul>
+                        <p class="card-text">Managing customer service interactions efficiently during peak shopping periods.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-danger btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 facility-card">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="card-title mb-0">Tech Innovation Lab</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="facility-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-pc-display" viewBox="0 0 16 16">
+                                <path d="M8 1a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1zm1 13.5a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0m2 0a.5.5 0 1 0 1 0 .5.5 0 0 0-1 0M9.5 1a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM9 3.5a.5.5 0 0 0 .5.5h5a.5.5 0 0 0 0-1h-5a.5.5 0 0 0-.5.5M1.5 2A1.5 1.5 0 0 0 0 3.5v7A1.5 1.5 0 0 0 1.5 12H6v2h-.5a.5.5 0 0 0 0 1H7v-4H1.5a.5.5 0 0 1-.5-.5v-7a.5.5 0 0 1 .5-.5H7V2z"/>
+                            </svg>
+                        </div>
+                        <ul class="list-unstyled">
+                            <li><strong>Country:</strong> Japan</li>
+                            <li><strong>City:</strong> Tokyo</li>
+                            <li><strong>Address:</strong> 890 Technology Park</li>
+                            <li><strong>Services:</strong> Consulting Sessions, Equipment Access, Testing Facilities</li>
+                        </ul>
+                        <p class="card-text">Facilitating resource sharing and scheduling for technology researchers and developers.</p>
+                    </div>
+                    <div class="card-footer">
+                        <a href="#" class="btn btn-outline-secondary btn-sm">View Details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-primary text-white text-center py-3 mt-5">
+    <div class="container">
+        <p class="mb-0">© 2025 Queue Management System. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap JS Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+
+<script>
+    // NAVBAR TOGGLER MOBILE
+    document.addEventListener('DOMContentLoaded', function() {
+        // Get the navbar toggler button
+        const navbarToggler = document.querySelector('.navbar-toggler');
+
+        // Get the collapsible navbar content
+        const navbarCollapse = document.querySelector('#navbarNav');
+
+        // Add click event listener to the navbar toggler button
+        navbarToggler.addEventListener('click', function() {
+            // Toggle the 'show' class on the navbar collapse element
+            navbarCollapse.classList.toggle('show');
+        });
+
+        // Close the navbar when a nav item is clicked (for better mobile experience)
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(function(navLink) {
+            navLink.addEventListener('click', function() {
+                // Check if the navbar is expanded (visible on small screens)
+                if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+                    // Close the navbar by removing the 'show' class
+                    navbarCollapse.classList.remove('show');
+                }
+            });
+        });
+    });
+
+
+    // SCROLLING DOWN SECTIONS FADE IN
+    document.addEventListener('DOMContentLoaded', () => {
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in-view');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                },
+                { threshold: 0.1 }
+        );
+
+        sections.forEach((section) => observer.observe(section));
+    });
+</script>
+</body>
+</html>

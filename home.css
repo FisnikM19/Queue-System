@@ -30,12 +30,19 @@ section:where(.in-view) {
     animation-play-state: running;
 }
 
-.profile-img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #fff;
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.icon i {
+    font-size: 1.4em;
+    padding: 0.2rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 /* Stronger override */

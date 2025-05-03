@@ -13,10 +13,6 @@
     }
 }
 
-.navbar-brand {
-    font-weight: bold;
-    font-size: 1.5rem;
-}
 
 section {
     min-height: 100vh;
@@ -34,60 +30,56 @@ section:where(.in-view) {
     animation-play-state: running;
 }
 
-.nav-link {
-    font-size: 1.3rem;
-    margin: 0 5px;
-    font-weight: 600; /* Added font-weight for better visibility */
-    letter-spacing: 0.5px; /* Slightly increased letter spacing for better readability */
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+}
+
+/* Stronger override */
+.dropdown-menu .dropdown-item {
+    color: #fff !important;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    background-color: transparent !important; /* Prevent default white bg */
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover,
+.dropdown-menu .dropdown-item:focus {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+    color: #fff !important;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.navbar-nav .nav-link {
+    color: #fff;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
     transition: all 0.3s ease;
 }
 
-/* Make active nav link even more visible */
-.nav-link.active {
-    font-weight: 700; /* Bolder weight for active link */
-}
-
-/* Add hover effect for better interactivity */
-.nav-link:hover {
+.navbar-nav .nav-link:hover {
+    opacity: 0.85;
     text-decoration: underline;
-    opacity: 0.9;
 }
 
-/* Ensure navbar toggle button is clearly visible */
-.navbar-toggler {
-    border: 2px solid rgba(255, 255, 255, 0.8);
-    padding: 0.5rem;
-}
-
-.navbar-toggler:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
-    outline: none;
-}
 
 
 /* Mobile menu styles */
 @media (max-width: 991.98px) {
-    .navbar-collapse {
-        padding: 1rem 0;
-    }
-
-
     .navbar-nav {
-        margin-top: 0.5rem;
+        margin-top: 1rem;
     }
 
-    .nav-item {
-        padding: 0.5rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .nav-item:last-child {
-        border-bottom: none;
-    }
-
-    .nav-link {
-        display: block;
-        padding: 0.5rem 0;
+    .dropdown-menu {
+        margin-left: 0;
     }
 }
 

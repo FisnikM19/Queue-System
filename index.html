@@ -14,24 +14,29 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
     <div class="container">
         <a class="navbar-brand" href="#">Queue System</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Log In</a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        <img src="/img/navphoto.jfif" alt="Profile" class="profile-img">
+                        <span>John Doe</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-end bg-primary">
+                        <li><a class="dropdown-item text-white" href="#">Sign Up</a></li>
+                        <li><a class="dropdown-item text-white" href="#">Log In</a></li>
+                    </ul>
                 </li>
             </ul>
         </div>
     </div>
 </nav>
+
 
 <!-- Hero Section (Demo Content) -->
 <section class="hero-section">
@@ -344,34 +349,28 @@
 </footer>
 
 <!-- Bootstrap JS Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 
 <script>
-    // NAVBAR TOGGLER MOBILE
     document.addEventListener('DOMContentLoaded', function() {
-        // Get the navbar toggler button
-        const navbarToggler = document.querySelector('.navbar-toggler');
+        // REMOVE the custom navbar toggler code - let Bootstrap handle it
 
-        // Get the collapsible navbar content
-        const navbarCollapse = document.querySelector('#navbarNav');
-
-        // Add click event listener to the navbar toggler button
-        navbarToggler.addEventListener('click', function() {
-            // Toggle the 'show' class on the navbar collapse element
-            navbarCollapse.classList.toggle('show');
-        });
-
-        // Close the navbar when a nav item is clicked (for better mobile experience)
-        const navLinks = document.querySelectorAll('.nav-link');
+        // Only handle closing the navbar when non-dropdown nav items are clicked
+        const navLinks = document.querySelectorAll('.nav-link:not(.dropdown-toggle)');
         navLinks.forEach(function(navLink) {
             navLink.addEventListener('click', function() {
                 // Check if the navbar is expanded (visible on small screens)
-                if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
-                    // Close the navbar by removing the 'show' class
-                    navbarCollapse.classList.remove('show');
+                if (window.innerWidth < 992 && document.querySelector('#navbarNav').classList.contains('show')) {
+                    // Use Bootstrap's collapse functionality
+                    const bsCollapse = bootstrap.Collapse.getInstance(document.querySelector('#navbarNav'));
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    }
                 }
             });
         });
+
+        // Keep the rest of your code (scrolling animations, form handling, etc.)
     });
 
 
